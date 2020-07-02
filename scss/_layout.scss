@@ -20,3 +20,69 @@
         text-align: center;
     }
 }
+
+.about-us{
+    height: 120vh;
+    display: flex;
+    align-items: center;
+
+    &-left{
+        width: 40%;
+        position: relative;
+        left: -15rem;
+
+        img{
+            width: 100%;
+            opacity: .7;
+        }
+    }
+
+    &-right{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5rem;
+
+        .stars{
+            margin: 3rem 0;
+
+            .star{
+                font-size: 1.5rem;
+                color: base.$color-primary;
+                margin-left: 1rem;
+            }
+        }
+
+        .description{
+            font-family: base.$font-stack-josefin-sans;
+            font-size: 2.5rem;
+            font-style: italic;
+            color: base.$color-secondary;
+            text-align: justify;
+
+            &::first-letter{
+                padding-left: 5rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
