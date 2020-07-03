@@ -63,7 +63,64 @@
     }
 }
 
+.card {
+    width: 33.3333%;
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
 
+    &:hover &-overlay{
+        left: 0;
+    }
+
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        @extend %fullSpace;
+        background-color: rgba(variables.$color-primary, .8);
+        color: variables.$color-white;
+        z-index: 10;
+        @include mixins.flexLayout;
+        flex-direction: column;
+        transition: left .7s;
+
+        &-heading{
+            font-family: variables.$font-nunito;
+            font-size: 5rem;
+            @include mixins.textStyles(capitalize);
+        }
+
+        &-price{
+            font-family: variables.$font-josefin-sans;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            @include mixins.textStyles(capitalize)
+        }
+
+        &-btn{
+            width: 15rem;
+            height: 4rem;
+            color: variables.$color-primary;
+            background-color: variables.$color-white;
+            font-family: variables.$font-josefin-sans;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            border: 1px solid variables.$color-primary;
+            border-radius: 3rem;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    &-image{
+        @extend %fullSpace;
+        object-fit: cover;
+        opacity: .7;
+    }
+}
 
 
 
