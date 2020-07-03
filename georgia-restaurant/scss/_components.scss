@@ -1,0 +1,80 @@
+@use 'variables';
+@use 'mixins';
+
+.logo{
+    @include mixins.flexLayout;
+    font-size: 6rem;
+    color: variables.$color-primary;
+    width: 10rem;
+    height: 10rem;
+    border: .3rem solid variables.$color-primary;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.brand-name{
+    font-family: variables.$font-nunito;
+    font-size: 5rem;
+    color: variables.$color-secondary;
+    @include mixins.textStyles;
+}
+
+.brand-subname{
+    font-family: variables.$font-josefin-sans;
+    font-size: 1.8rem;
+    color: variables.$color-secondary;
+    text-align: center;
+    @include mixins.textStyles;
+}
+
+.main-heading{
+    font-family: variables.$font-dancing-script;
+    font-size: 10rem;
+    font-weight: 300;
+    color: variables.$color-primary;
+    margin-bottom: 4rem;
+}
+
+.sub-heading{
+    font-family: variables.$font-josefin-sans;
+    font-size: 6rem;
+    font-weight: 300;
+    color: variables.$color-secondary;
+    margin-bottom: 8rem;
+}
+
+.main-btn{
+    width: 17rem;
+    height: 4.5rem;
+    font-family: variables.$font-josefin-sans;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: variables.$color-primary;
+    background-color: transparent;
+    border: .1rem solid variables.$color-primary;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+
+    &:hover{
+        color: variables.$color-dark;
+        background-color: variables.$color-primary;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
