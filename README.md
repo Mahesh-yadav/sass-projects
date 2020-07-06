@@ -7,3 +7,4 @@ Website pages built with vanilla HTML, CSS, SASS and Javascript
 | Projects                                    | Links                                                                                                                         |
 | -----------------------------------         | ----------------------------------------------------------------------------------------------------------------              |
 | Georgia Restaurant                          | [Demo](/georgia-restaurant/index.html)                                                                                        |
+| Clothing Store                              | [Demo](/clothing-store/index.html)                                                                                            |
