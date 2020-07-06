@@ -1,0 +1,15 @@
+@use '../abstracts/mixins';
+
+.first-nav{
+    grid-area: 1 / 7 / 2 / -1;
+    @include mixins.navigation;
+}
+
+.second-nav{
+    grid-area: 3 / 3 / 4 / 8;
+    @include mixins.navigation;
+
+    &-item{
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,22 @@
+@use './variables';
+
+@mixin navigation {
+    &-list{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+
+    &-link{
+        text-decoration: none;
+        color: variables.color(primary);
+        font-size: variables.font-size(sm);
+        transition: all .3s;
+
+        &:hover{
+            color: lighten(variables.color(primary), 40%);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+
+.heading{
+    grid-area: 2 / 3 / 3 / 7;
+    text-align: center;
+
+    &-text{
+        font-family: "Great Vibes", cursive;
+        font-size: variables.font-size(xl) * 2;
+        font-weight: lighter;
+        letter-spacing: .5rem;
+    }
+}

@@ -1,7 +1,153 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Josefin Sans', sans-serif; }
+  box-sizing: inherit;
+}
 
-html {
-  font-size: 62.5%; }
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+  row-gap: 1.6rem;
+  background-color: #F2F0F1;
+}
+
+.header {
+  grid-area: 1/1/2/-1;
+  display: grid;
+  grid-template-columns: 1fr repeat(7, minmax(min-content, 16rem)) 1fr;
+  gap: 2rem;
+}
+
+.first-nav {
+  grid-area: 1/7/2/-1;
+}
+.first-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.first-nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.first-nav-link:hover {
+  color: #999999;
+}
+
+.second-nav {
+  grid-area: 3/3/4/8;
+}
+.second-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.second-nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.second-nav-link:hover {
+  color: #999999;
+}
+.second-nav-item {
+  padding: 1rem 0;
+}
+
+.logo {
+  grid-area: 1/1/2/2;
+  padding: 1rem;
+}
+.logo-img {
+  width: 10rem;
+  height: 100%;
+}
+
+.heading {
+  grid-area: 2/3/3/7;
+  text-align: center;
+}
+.heading-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 6rem;
+  font-weight: lighter;
+  letter-spacing: 0.5rem;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+.dropdown-menu::after {
+  content: "";
+  position: absolute;
+  right: -2.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 7px solid #333;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+.dropdown-menu:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+
+.dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #e6e2e4;
+  transition: all 0.5s;
+}
+.dropdown-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.dropdown-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.dropdown-link:hover {
+  color: #999999;
+}
+.dropdown-list {
+  flex-direction: column;
+}
+.dropdown-item {
+  margin: 0.7rem;
+}
+.dropdown-link {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=main.css.map */
