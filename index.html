@@ -5,35 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SASS Projects</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main>
-      <h1 class="heading">SASS Projects</h1>
+    <header class="container-fluid bg-info">
+      <div class="row align-items-center justify-content-center banner-row">
+        <div class="col-12 text-center">
+          <h1 class="text-capitalize mb-4 banner-heading">
+            <span class="text-warning font-weight-normal">Sass</span>
+            <span class="text-white font-weight-bold">Projects</span>
+          </h1>
+          <p class="text-white h2 font-italic font-weight-light banner-subheading">
+            Implemented using 
+            <span class="text-warning font-weight-bold">HTML</span>, 
+            <span class="text-warning font-weight-bold">CSS</span> and 
+            <span class="text-warning font-weight-bold">SASS</span>
+          </p>
+        </div>
+      </div>
+    </header>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Link</th>
-          </tr>
-        </thead>
+    <div id="vue-app">
+      <div class="container-fluid p-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-12 col-sm-9 col-md-5 col-lg-4 my-3 card-column" v-for="project in projects" :key="project.id">
+            <a :href="project.url" class="project-link" target="_blank">
+              <div class="project-card">
+                <img :src="project.designUrl" :alt="project.title" class="project-img">
+                <div class="project-text text-warning">
+                  <p class="text-capitalize project-title text-center font-weight-bold">{{project.title}}</p>
+                  <p class="project-tech text-center">Technologies Used: <br> {{project.technologies.join(', ')}}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <tbody>
-          <tr>
-            <td>Georgia Restaurant</td>
-            <td class="text-center">
-              <a href="./georgia-restaurant/index.html" target="_blank">Demo</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Clothing Store</td>
-            <td class="text-center">
-              <a href="./clothing-store/index.html" target="_blank">Demo</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js" type="module"></script> 
   </body>
 </html>
