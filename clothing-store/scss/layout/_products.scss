@@ -1,0 +1,27 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.products{
+    grid-area: 3 / 1 / 4 / -1;
+
+    &-heading{
+        margin: 5rem 0;
+
+        &-text{
+            text-align: center;
+            font-size: variables.font-size(lg) + 2rem;
+            font-weight: 300;
+            color: variables.color(primary);
+        }
+    }
+
+    &-wrapper{
+        @include mixins.flexDisplay;
+    }
+
+    &-btn{
+        @include mixins.flexDisplay;
+    }
+}
+
+

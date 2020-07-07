@@ -1,0 +1,72 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.btn{
+    width: 16rem;
+    height: 4rem;
+    text-decoration: none;
+    @include mixins.flexDisplay(space-around);
+    position: relative;
+
+    &:hover &-bg{
+        width: 18rem;
+    }
+
+    &:hover &-text{
+        color: variables.color(secondary);
+    }
+
+    &:hover .arrow{
+        transform: translateX(1rem);
+    }
+
+    &:hover .arrow .arrow-line-1{
+        width: 1.8rem;
+    }
+
+    &-bg{
+        width: 4rem;
+        height: 4rem;
+        background-color: variables.color(primary);
+        border-radius: 5rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: width .2s;
+    }
+
+    &-text{
+        font-size: variables.font-size(xs);
+        text-transform: uppercase;
+        color: variables.color(primary);
+        z-index: 10;
+    }
+
+    .arrow{
+        @include mixins.flexDisplay;
+        transition: transform .2s;
+
+        &-line{
+            height: .2rem;
+            background-color: variables.color(secondary);
+            position: absolute;
+            transform-origin: right;
+        }
+
+        &-line-1{
+            width: 0;
+            transform: translateX(-.5rem);
+            transition: width .2s;
+        }
+
+        &-line-2{
+            width: 1rem;
+            transform: rotateZ(45deg);
+        }
+
+        &-line-3{
+            width: 1rem;
+            transform: rotateZ(-45deg);
+        }   
+    }
+}

@@ -1,0 +1,59 @@
+@use '../abstracts/variables';
+
+.product{
+    position: relative;
+
+    &:hover &-description{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:hover &-img{
+        opacity: .5;
+    }
+
+    &-img{
+        width: 100%;
+        transition: all 1s .3s;
+    }
+
+    &-description{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparentize(variables.color(secondary), .4);
+        padding: 2rem;
+        border: .1rem solid variables.color(primary);
+        border-radius: .5rem;
+        color: variables.color(primary);
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s .3s;
+
+        &-heading{
+            font-size: variables.font-size(xl);
+        }
+
+        &-price{
+            font-size: variables.font-size(lg);
+            font-weight: 300;
+            margin: 1rem 0;
+
+            span{
+                font-weight: 600;
+            } 
+        }
+
+        &-btn{
+            font-size: variables.font-size(xs);
+            text-decoration: none;
+            color: variables.color(quarternary);
+            display: block;
+            padding: .5rem 1rem;
+            border: .1rem solid variables.color(quarternary);
+            background-color: lighten(variables.color(primary), 20%);
+        }
+    }
+}

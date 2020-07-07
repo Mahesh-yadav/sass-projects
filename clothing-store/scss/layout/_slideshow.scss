@@ -1,0 +1,76 @@
+@use '../abstracts/variables';
+
+.slideshow{
+    grid-area: 2 / 1 / 3 / -1;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    &-slide{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: inherit;
+        height: inherit;
+        animation: slideshow 20s linear infinite;
+        visibility: hidden;
+        opacity: 0;
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+    }   
+
+    &-content{
+        position: absolute;
+        left: 6rem;
+        bottom: 6rem;
+        background-color: rgba(variables.color(tertiary), .8);
+        padding: 4rem;
+        max-width: 45rem;
+
+        h2{
+            font-size: variables.font-size(xl) + 1.2rem;
+            color: variables.color(primary);
+        }
+
+        p {
+            font-size: variables.font-size(xs);
+            margin: 1rem 0;
+        }
+    }
+
+}
+
+$animList: 1 0s, 2 4s, 3 8s, 4 12s, 5 16s;
+
+@each $item in $animList {
+    .slideshow-slide:nth-child(#{nth($item, 1)}){
+        animation-delay: nth($item, 2);
+    }
+}
+
+@keyframes slideshow{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    2%{
+        visibility: visible;
+        opacity: 1;
+    }
+    18%{
+        visibility: visible;
+        opacity: 1;
+    }
+    20%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
