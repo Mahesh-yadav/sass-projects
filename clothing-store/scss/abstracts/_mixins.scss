@@ -26,3 +26,31 @@
     justify-content: $justCont;
     align-items: $alignItems;
 }
+
+@mixin footerList {
+    &-heading{
+        font-size: variables.font-size(lg);
+        color: variables.color(primary);
+    }
+
+    &-item{
+        list-style: none;
+        margin: 1rem 0;
+    }
+
+    &-link{
+        text-decoration: none;
+        font-size: variables.font-size(xs);
+        color: lighten(variables.color(primary), 15%);
+        transition: color .2s;
+
+        &:hover{
+            color: lighten(variables.color(primary), 35%);
+        }
+
+        &:focus{
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+}

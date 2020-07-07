@@ -173,6 +173,220 @@ body {
   align-items: center;
 }
 
+.footer {
+  grid-area: 4/1/5/-1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5rem 0;
+  border-top: 0.1rem solid #333;
+}
+.footer .footer-nav-heading {
+  font-size: 2.5rem;
+  color: #333;
+}
+.footer .footer-nav-item {
+  list-style: none;
+  margin: 1rem 0;
+}
+.footer .footer-nav-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #595959;
+  transition: color 0.2s;
+}
+.footer .footer-nav-link:hover {
+  color: #8c8c8c;
+}
+.footer .footer-nav-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.footer .contact-list-heading {
+  font-size: 2.5rem;
+  color: #333;
+}
+.footer .contact-list-item {
+  list-style: none;
+  margin: 1rem 0;
+}
+.footer .contact-list-link {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #595959;
+  transition: color 0.2s;
+}
+.footer .contact-list-link:hover {
+  color: #8c8c8c;
+}
+.footer .contact-list-link:focus {
+  text-decoration: underline;
+  outline: none;
+}
+.footer .contact-heading {
+  font-size: 3rem;
+  color: #333;
+  text-align: center;
+}
+.footer .contact-paragraph {
+  font-size: 2.5rem;
+  color: #737373;
+  margin: 1rem 0;
+  text-align: center;
+}
+.footer .contact .inputs-group {
+  display: flex;
+}
+.footer .contact .inputs-group input {
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin: 1rem 0.5rem;
+  border: 0.1rem solid #1a1a1a;
+  border-radius: 0.3rem;
+  outline: none;
+  transition: all 0.5s;
+}
+.footer .contact .inputs-group input:focus {
+  box-shadow: 0 0 0 0.2rem #b3b3b3;
+  border: 0.1rem solid #b3b3b3;
+}
+.footer .contact .inputs-group-text {
+  width: 50%;
+}
+.footer .contact .inputs-group-email {
+  width: 60%;
+}
+.footer .contact .inputs-group-btn {
+  width: 40%;
+  color: #FFE;
+  background-color: #666666;
+  transition: background-color 0.2s;
+}
+.footer .contact .inputs-group-btn:hover {
+  background-color: #333;
+}
+.footer .contact .social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.footer .contact .social-icons-link {
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .contact .social-icons-link i {
+  font-size: 2rem;
+}
+
+.social-icons-item:nth-child(1) .social-icons-link {
+  color: #3b5998;
+  border: 0.1rem solid #3b5998;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(1):hover .social-icons-link {
+  color: white;
+  background-color: #3b5998;
+}
+
+.social-icons-item:nth-child(1) .social-icons-link:focus {
+  color: white;
+  background-color: #3b5998;
+  outline: none;
+}
+
+.social-icons-item:nth-child(2) .social-icons-link {
+  color: #b31217;
+  border: 0.1rem solid #b31217;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(2):hover .social-icons-link {
+  color: white;
+  background-color: #b31217;
+}
+
+.social-icons-item:nth-child(2) .social-icons-link:focus {
+  color: white;
+  background-color: #b31217;
+  outline: none;
+}
+
+.social-icons-item:nth-child(3) .social-icons-link {
+  color: #dc4e41;
+  border: 0.1rem solid #dc4e41;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(3):hover .social-icons-link {
+  color: white;
+  background-color: #dc4e41;
+}
+
+.social-icons-item:nth-child(3) .social-icons-link:focus {
+  color: white;
+  background-color: #dc4e41;
+  outline: none;
+}
+
+.social-icons-item:nth-child(4) .social-icons-link {
+  color: #55acee;
+  border: 0.1rem solid #55acee;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(4):hover .social-icons-link {
+  color: white;
+  background-color: #55acee;
+}
+
+.social-icons-item:nth-child(4) .social-icons-link:focus {
+  color: white;
+  background-color: #55acee;
+  outline: none;
+}
+
+.social-icons-item:nth-child(5) .social-icons-link {
+  color: #517fa4;
+  border: 0.1rem solid #517fa4;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(5):hover .social-icons-link {
+  color: white;
+  background-color: #517fa4;
+}
+
+.social-icons-item:nth-child(5) .social-icons-link:focus {
+  color: white;
+  background-color: #517fa4;
+  outline: none;
+}
+
+.social-icons-item:nth-child(6) .social-icons-link {
+  color: #0077b5;
+  border: 0.1rem solid #0077b5;
+  transition: all 0.3s;
+}
+
+.social-icons-item:nth-child(6):hover .social-icons-link {
+  color: white;
+  background-color: #0077b5;
+}
+
+.social-icons-item:nth-child(6) .social-icons-link:focus {
+  color: white;
+  background-color: #0077b5;
+  outline: none;
+}
+
 .logo {
   grid-area: 1/1/2/2;
   padding: 1rem;
