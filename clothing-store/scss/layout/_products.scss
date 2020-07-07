@@ -17,6 +17,10 @@
 
     &-wrapper{
         @include mixins.flexDisplay;
+
+        @include mixins.responsive(sm){
+            flex-direction: column;
+        }
     }
 
     &-btn{

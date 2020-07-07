@@ -8,6 +8,10 @@
     @include mixins.flexDisplay(space-around);
     position: relative;
 
+    @include mixins.responsive(sm){
+        margin: 7rem 0 2rem;
+    }
+
     &:hover &-bg{
         width: 18rem;
     }
@@ -33,6 +37,10 @@
         left: 0;
         top: 0;
         transition: width .2s;
+
+        @include mixins.responsive(sm){
+            width: 18rem;
+        }
     }
 
     &-text{
@@ -40,6 +48,10 @@
         text-transform: uppercase;
         color: variables.color(primary);
         z-index: 10;
+
+        @include mixins.responsive(sm){
+            color: variables.color(secondary);
+        }
     }
 
     .arrow{

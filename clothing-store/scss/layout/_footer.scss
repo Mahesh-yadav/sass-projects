@@ -7,8 +7,27 @@
     padding: 5rem 0;
     border-top: .1rem solid variables.color(primary);
 
+    @include mixins.responsive(xl){
+        flex-wrap: wrap;
+    }
+
+    .footer-nav-wrapper{
+        @include mixins.responsive(xl){
+            order: 1;
+            padding: 0 5rem;
+        }
+    }
+
     .footer-nav{
         @include mixins.footerList;
+    }
+
+    .contact-list-wrapper{
+        @include mixins.responsive(xl){
+            order: 2;
+            padding: 0 5rem;
+            align-self: start;
+        }
     }
 
     .contact-list{
@@ -16,6 +35,12 @@
     }
 
     .contact{
+
+        @include mixins.responsive(xl){
+            order: 3;
+            padding: 0 8rem;
+            margin-top: 5rem;
+        }
 
         &-heading{
             font-size: variables.font-size(xl);
@@ -31,6 +56,10 @@
 
         .inputs-group{
             display: flex;
+
+            @include mixins.responsive(sm){
+                justify-content: center;
+            }            
 
             input{
                 padding: 1rem;
@@ -82,8 +111,17 @@
                 border-radius: 50%;
                 @include mixins.flexDisplay;
 
+                @include mixins.responsive(sm){
+                    width: 3rem;
+                    height: 3rem;
+                }
+
                 i{
                     font-size: variables.font-size(md);
+
+                    @include mixins.responsive(sm){
+                        font-size: variables.font-size(sm);
+                    }
                 }
             }
         }

@@ -3,11 +3,31 @@
 .first-nav{
     grid-area: 1 / 7 / 2 / -1;
     @include mixins.navigation;
+
+    @include mixins.responsive(xl){
+        grid-area: 1 / 6 / 2 / -1;
+    }
+    @include mixins.responsive(lg){
+        grid-area: 1 / 5 / 2 / -1;
+    }
+    @include mixins.responsive(md){
+        grid-area: 1 / 4 / 2 / -1;
+    }
+    @include mixins.responsive(sm){
+        grid-area: 1 / 2 / 2 / -1;
+    }
 }
 
 .second-nav{
     grid-area: 3 / 3 / 4 / 8;
     @include mixins.navigation;
+
+    @include mixins.responsive(lg){
+        grid-area: 3 / 2 / 4 / 9;
+    }
+    @include mixins.responsive(md){
+        grid-area: 3 / 1 / 4 / -1;
+    }
 
     &-item{
         padding: 1rem 0;
