@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+
+.filters-bar{
+    background-color: variables.color(bg-main);
+    display: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.filters-bar-show ~ .listings{
+    top: -9rem;
+}

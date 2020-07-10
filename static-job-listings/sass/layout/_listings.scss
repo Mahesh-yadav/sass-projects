@@ -1,0 +1,11 @@
+@use '../abstracts/variables';
+
+.listings{
+    background-color: variables.color(bg-main);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 3rem 5rem;
+    position: relative;
+}

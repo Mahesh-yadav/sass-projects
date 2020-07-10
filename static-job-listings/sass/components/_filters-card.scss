@@ -1,0 +1,78 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.filters-card{
+    @include mixins.cardStyles;
+    min-width: 30rem;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -7rem;
+
+    @include mixins.responsive(md){
+        max-width: 75rem;
+    }
+
+    @include mixins.responsive(lg){
+        display: flex;
+        max-width: 100rem;
+        align-items: center;
+        padding: 2.5rem;
+        margin: 1rem;
+    }
+
+    .filters{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .filters div{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    span{
+        @include mixins.categoryBadge;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        margin: 0;
+    }
+
+    .btn-remove{
+        border: none;
+        outline: none;
+        width: 3rem;
+        height: 2.9rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: white;
+        background-color: variables.color(primary);
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        padding: .2rem;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    .btn-remove:hover{
+        background-color: variables.color(very-dark-cyan);
+    }
+
+    .btn-clear{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: transparent;
+        color: variables.color(primary);
+        font-weight: bold;
+        border-bottom: .2rem solid transparent;
+    }
+
+    .btn-clear:hover{
+       border-bottom: .2rem solid variables.color(primary);
+    }
+}

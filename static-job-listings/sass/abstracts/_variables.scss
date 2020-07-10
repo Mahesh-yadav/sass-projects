@@ -1,0 +1,11 @@
+$colors: (
+    primary: hsl(180, 29%, 50%),
+    bg-main: hsl(180, 52%, 96%),
+    tablets: hsl(180, 31%, 95%),
+    dark-cyan: hsl(180, 8%, 52%),
+    very-dark-cyan: hsl(180, 14%, 20%)
+);
+
+@function color($name){
+    @return map-get($colors, $name);
+}
