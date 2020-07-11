@@ -16,49 +16,43 @@
     <header class="header">
     </header>
 
-    <section class="filters-bar">
-      <div class="filters-card">
-        <div class="filters">
-          <div>
-            <span>Frontend</span>
-            <button class="btn-remove">&times;</button>
+    <div id="app">
+      <section v-show="filters.length > 0" class="filters-bar">
+        <div class="filters-card">
+          <div class="filters">
+            <div v-for="filter in filters" :key="filter">
+              <span>{{filter}}</span>
+              <button class="btn-remove" @click="removeFilter(filter)">&times;</button>
+            </div>
           </div>
-          <div>
-            <span>CSS</span>
-            <button class="btn-remove">&times;</button>
+          <button class="btn-clear" @click="filters = []">Clear</button>
+        </div>
+      </section>
+  
+      <section class="listings" :Style="{top: filters.length > 0 ? '-8rem' : 0}">
+        <div class="job-card" v-for="job in filteredJobs" :key="job.id" :class="{'border-featured' : job.featured}">
+          <div class="job-card-img">
+            <img :src="job.logo" alt="job.company">
           </div>
-          <div>
-            <span>Fullstack</span>
-            <button class="btn-remove">&times;</button>
+          <div class="job-card-content">
+            <div class="company">
+              <h3 class="company-name">{{job.company}}</h3>
+              <p v-if="job.new" class="badge badge-new">new!</p>
+              <p v-if="job.featured" class="badge badge-featured">featured</p>
+            </div>
+            <h2 class="job-position">{{job.position}}</h2>
+            <div class="job-details">
+              <span>{{job.postedAt}}</span>
+              <span>{{job.contract}}</span>
+              <span>{{job.location}}</span>
+            </div>
+          </div>
+          <div class="categories">
+            <span @click="addFilter(category)" v-for="category in jobCategories(job)" :key="category">{{category}}</span>
           </div>
         </div>
-        <button class="btn-clear">Clear</button>
-      </div>
-    </section>
-
-    <section class="listings" id="app">
-      <div class="job-card" v-for="job in jobs" :key="job.id" :class="{'border-featured' : job.featured}">
-        <div class="job-card-img">
-          <img :src="job.logo" alt="job.company">
-        </div>
-        <div class="job-card-content">
-          <div class="company">
-            <h3 class="company-name">{{job.company}}</h3>
-            <p v-if="job.new" class="badge badge-new">new!</p>
-            <p v-if="job.featured" class="badge badge-featured">featured</p>
-          </div>
-          <h2 class="job-position">{{job.position}}</h2>
-          <div class="job-details">
-            <span>{{job.postedAt}}</span>
-            <span>{{job.contract}}</span>
-            <span>{{job.location}}</span>
-          </div>
-        </div>
-        <div class="categories">
-          <span v-for="category in jobCategories(job)" :key="category">{{category}}</span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/app.js" type="module"></script>

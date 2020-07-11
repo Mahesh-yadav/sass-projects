@@ -66,7 +66,7 @@ export default [
     "new": false,
     "featured": false,
     "position": "Software Engineer",
-    "role": "FullStack",
+    "role": "Fullstack",
     "level": "Midweight",
     "postedAt": "1w ago",
     "contract": "Full Time",

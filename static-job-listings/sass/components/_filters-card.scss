@@ -5,6 +5,7 @@
     @include mixins.cardStyles;
     min-width: 30rem;
     padding: 2.5rem;
+    padding-bottom: .5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +20,6 @@
         display: flex;
         max-width: 100rem;
         align-items: center;
-        padding: 2.5rem;
         margin: 1rem;
     }
 
@@ -70,6 +70,7 @@
         color: variables.color(primary);
         font-weight: bold;
         border-bottom: .2rem solid transparent;
+        margin-bottom: 1rem;
     }
 
     .btn-clear:hover{

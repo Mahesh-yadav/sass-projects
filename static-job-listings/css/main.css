@@ -42,14 +42,9 @@ html {
 
 .filters-bar {
   background-color: #effafa;
-  display: none;
   display: flex;
   justify-content: center;
   padding: 1rem 3rem;
-}
-
-.filters-bar-show ~ .listings {
-  top: -9rem;
 }
 
 .job-card {
@@ -212,6 +207,7 @@ html {
   margin: 2.5rem;
   min-width: 30rem;
   padding: 2.5rem;
+  padding-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,7 +224,6 @@ html {
     display: flex;
     max-width: 100rem;
     align-items: center;
-    padding: 2.5rem;
     margin: 1rem;
   }
 }
@@ -281,6 +276,7 @@ html {
   color: #5ba4a4;
   font-weight: bold;
   border-bottom: 0.2rem solid transparent;
+  margin-bottom: 1rem;
 }
 .filters-card .btn-clear:hover {
   border-bottom: 0.2rem solid #5ba4a4;
