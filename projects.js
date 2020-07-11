@@ -8,6 +8,14 @@ const projects = [
         
     },
     {
+        id: 4,
+        title: 'EasyBank Landing Page',
+        technologies: ['HTML', 'CSS', 'SASS', 'JS', 'Vue'],
+        designUrl: './designs/easybank-landing-page.jpg',
+        url: './easybank-landing-page/index.html'
+        
+    },
+    {
         id: 1,
         title: 'Georgia Restaurant',
         technologies: ['HTML', 'CSS', 'SASS'],
