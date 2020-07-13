@@ -1,0 +1,178 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.header{
+    display: grid;
+    grid-template-columns: 8vw 1fr 8vw;
+    background-color: variables.color(white);
+    padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    div{
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include mixins.responsive(md){
+            justify-content: initial;
+        }
+    }
+
+    .main-nav{
+        width: 100%;
+        height: 100vh;
+        padding: 3rem 8vw;
+        background: linear-gradient(to bottom, variables.color(dark-blue), rgba(variables.color(grayish-blue), 0.5));
+        position: fixed;
+        left: 0;
+        top: 7.3rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s;
+
+        @include mixins.responsive(md){
+            width: auto;
+            height: auto;
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            background-color: variables.color(white);
+            position: static;
+            visibility: visible;
+            opacity: 1;
+            transition: none;
+            margin: 0 auto;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: variables.color(white);
+            padding: 3rem 0;
+            border-radius: .5rem;
+
+            @include mixins.responsive(md){
+                flex-direction: row;
+                padding: 0;
+            }
+        }
+
+        &-item{
+            list-style: none;
+            margin-bottom: 2rem;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            @include mixins.responsive(md){
+                margin: 0 1rem;
+            }
+
+            @include mixins.responsive(lg){
+                margin: 0 1.5rem;
+            }
+        }
+
+        &-link{
+            text-decoration: none;
+            font-size: 2rem;
+            color: variables.color(dark-blue);
+
+            @include mixins.responsive(md){
+                font-size: 1.6rem;
+                color: variables.color(grayish-blue);
+                position: relative;
+                transition: all .3s;
+
+                &:hover{
+                    color: variables.color(dark-blue);
+
+                    &::after{
+                        width: 100%;
+                    }
+                }
+
+                &::after{
+                    content: '';
+                    width: 0;
+                    height: .3rem;
+                    background: linear-gradient(to right, variables.color(lime-green), variables.color(bright-cyan));
+                    position: absolute;
+                    left: 0;
+                    top: calc(100% + 1.7rem);
+                    transition: all .3s;
+                }
+            }
+
+            @include mixins.responsive(lg){
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    label{
+        height: 3.3rem;
+    }
+
+    .icon-nav{
+        padding: .8rem;
+        border-radius: .5rem;
+        cursor: pointer;
+        height: 3rem;
+
+        &:hover{
+            background-color: variables.color(light-grayish-blue);
+        }
+    }
+
+    .icon-menu{
+        @include mixins.responsive(md){
+            display: none;
+        }
+    }
+
+    .icon-close{
+        display: none;
+    }
+
+    #nav-toggler:checked ~ [for="nav-toggler"] .icon-menu{
+        display: none;
+    }
+    #nav-toggler:checked ~ [for="nav-toggler"] .icon-close{
+        display: block;
+
+        @include mixins.responsive(md){
+            display: none;
+        }
+    }
+    #nav-toggler:checked ~ .main-nav{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btn-request{
+        display: none;
+
+        @include mixins.responsive(md){
+            display: block;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.feature-card{
+    text-align: center;
+    margin: 0 auto 4rem;
+    max-width: 35rem;
+
+    @include mixins.responsive(lg){
+        text-align: left;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    h3{
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: 300;
+        color: variables.color(dark-blue);
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: variables.color(grayish-blue);
+        line-height: 2.4rem;
+    }
+}

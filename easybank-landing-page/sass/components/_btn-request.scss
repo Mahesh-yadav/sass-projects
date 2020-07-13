@@ -1,0 +1,16 @@
+@use '../abstracts/variables';
+
+.btn-request{
+    width: 15rem;
+    height: 3.5rem;
+    color: variables.color(white);
+    background: linear-gradient(to right, variables.color(lime-green), variables.color(bright-cyan));
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover{
+        opacity: .8;
+    }
+}

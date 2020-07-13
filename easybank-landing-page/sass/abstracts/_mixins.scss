@@ -1,0 +1,17 @@
+@mixin responsive($deviceSize) {
+    @if ($deviceSize == sm) {
+        @media (min-width: 576px){
+            @content;
+        }
+    }
+    @if ($deviceSize == md) {
+        @media (min-width: 900px){
+            @content;
+        }
+    }
+    @if ($deviceSize == lg) {
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}

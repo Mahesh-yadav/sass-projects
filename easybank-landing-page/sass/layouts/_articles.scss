@@ -1,0 +1,45 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.articles{
+    display: grid;
+    grid-template-columns: 8vw 1fr 8vw;
+    background-color: variables.color(very-light-gray);
+    padding: 10rem 0 7rem;
+
+    &-header{
+        grid-area: 1 / 2 / 2 / 3;
+        text-align: center;
+        padding-bottom: 3rem;
+
+        @include mixins.responsive(md){
+            text-align: left;
+        }
+
+        h2{
+            font-size: 3rem;
+            font-weight: 300;
+            color: variables.color(dark-blue);
+        }
+    }
+
+    &-cards{
+        grid-area: 2 / 2 / 3 / 3;
+
+        @include mixins.responsive(sm){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+
+        @include mixins.responsive(md){
+            row-gap: 3rem;
+        }
+
+        @include mixins.responsive(lg){
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 3rem;
+        }
+    }
+
+}

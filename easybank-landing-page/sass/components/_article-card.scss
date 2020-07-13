@@ -1,0 +1,54 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+.article-card{
+    margin: 0 auto 2rem;
+    max-width: 35rem;
+    border-radius: .5rem;
+    background-color: variables.color(white);
+
+    &:last-child{
+        margin-bottom: 0;
+
+        @include mixins.responsive(sm){
+            margin-bottom: 2rem;
+        }
+    }
+
+    .card-image{
+        width: 100%;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;   
+    }
+
+    .card-body{
+        padding: 3rem;
+
+        .card-author{
+            font-size: 1rem;
+            font-weight: 500;
+            color: variables.color(grayish-blue);
+        }
+
+        .card-title{
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: variables.color(dark-blue);
+            transition: color .4s;
+            cursor: pointer;
+
+            &:hover{
+                color: variables.color(lime-green);
+            }
+        }
+    
+        p{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: variables.color(grayish-blue);
+            line-height: 1.8rem;
+        }
+    }
+}
