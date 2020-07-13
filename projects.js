@@ -10,7 +10,7 @@ const projects = [
     {
         id: 4,
         title: 'EasyBank Landing Page',
-        technologies: ['HTML', 'CSS', 'SASS', 'JS', 'Vue'],
+        technologies: ['HTML', 'CSS', 'SASS'],
         designUrl: './designs/easybank-landing-page.jpg',
         url: './easybank-landing-page/index.html'
         
