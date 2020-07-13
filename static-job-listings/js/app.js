@@ -13,21 +13,21 @@ new Vue({
             }
 
             return this.jobs.filter((job) => {
-                const categories = this.jobCategories(job);
+                const categoriesLowercase = this.jobCategories(job).map((c) => c.toLowerCase());
+                const filteredLowercase = this.filters.map((f) => f.toLowerCase());
 
-                for(let filter of this.filters){
-                    if(!categories.includes(filter)){
-                        return false;
-                    }
+                if(filteredLowercase.every((filter) => categoriesLowercase.includes(filter))){
+                    return true;
                 }
 
-                return true;
+                return false;
+                
             });
         }
     },
     methods: {
         jobCategories(job){
-            return [job.role, job.level].concat(job.languages, job.tools);
+            return [job.role, job.level, ...job.languages, ...job.tools]
         },
         addFilter(filter){
             if(!this.filters.includes(filter)){
