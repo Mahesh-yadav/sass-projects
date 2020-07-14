@@ -1,0 +1,10 @@
+{
+    "name": "manage-landing-page",
+    "version": "1.0.0",
+    "main": "index.html",
+    "license": "MIT",
+    "scripts": {
+      "compile": "sass --watch sass:css"
+    }
+  }
+  

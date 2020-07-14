@@ -16,6 +16,14 @@ const projects = [
         
     },
     {
+        id: 5,
+        title: 'Manage Landing Page',
+        technologies: ['HTML', 'CSS', 'SASS'],
+        designUrl: './designs/manage-landing-page.jpg',
+        url: './manage-landing-page/index.html'
+        
+    },
+    {
         id: 1,
         title: 'Georgia Restaurant',
         technologies: ['HTML', 'CSS', 'SASS'],
