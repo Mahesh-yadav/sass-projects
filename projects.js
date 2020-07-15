@@ -10,9 +10,17 @@ const projects = [
     {
         id: 4,
         title: 'EasyBank Landing Page',
-        technologies: ['HTML', 'CSS', 'SASS'],
+        technologies: ['HTML', 'CSS', 'SASS', 'JS'],
         designUrl: './designs/easybank-landing-page.jpg',
         url: './easybank-landing-page/index.html'
+        
+    },
+    {
+        id: 6,
+        title: 'Chat App Illustration',
+        technologies: ['HTML', 'CSS', 'SASS'],
+        designUrl: './designs/chat-app.jpg',
+        url: './chat-app-css-illustration/index.html'
         
     },
     {
