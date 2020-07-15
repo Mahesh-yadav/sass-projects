@@ -1,0 +1,33 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.intro{
+    padding: 1rem 3rem 6rem;
+    text-align: center;
+    z-index: 10;
+
+    @include mixins.responsive(lg){
+        text-align: left;
+    }
+
+    &-heading{
+        font-size: 4rem;
+        font-weight: 500;
+        color: variables.color(main-heading);
+        margin-bottom: 2.5rem;
+
+        
+    }
+
+    &-para{
+        font-size: 1.6rem;
+        color: variables.color(main-text);
+        line-height: 2.5rem;
+        max-width: 40rem;
+        margin: 0 auto;
+
+        @include mixins.responsive(xl){
+            max-width: 45rem;
+        }
+    }
+}

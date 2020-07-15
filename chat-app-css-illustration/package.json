@@ -1,0 +1,10 @@
+{
+    "name": "chat-app-illustration",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "compile": "sass --watch sass:css"
+    }
+  }
+  

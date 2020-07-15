@@ -1,0 +1,41 @@
+@mixin chatMsg($color, $bgColor) {
+    width: 60%;
+    color: $color;
+    background-color: $bgColor;
+    padding: .8rem;
+    font-size: .8rem;
+    font-weight: 500;
+    margin-bottom: .8rem;
+    border-radius: 1rem;
+    line-height: 1.4rem;
+    opacity: .8;
+};
+
+@mixin chatGroup($alignSelf, $alignItems) {
+    align-self: $alignSelf;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: $alignItems;
+}
+
+@mixin responsive($width) {
+    @if ($width == sm) {
+        @media (min-width: 568px){
+            @content;
+        }
+    }
+
+    @if ($width == lg){
+        @media (min-width: 900px){
+            @content;
+        }
+    }
+
+    @if ($width == xl){
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}

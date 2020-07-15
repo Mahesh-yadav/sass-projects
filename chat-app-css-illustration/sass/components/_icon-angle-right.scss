@@ -1,0 +1,32 @@
+@use '../abstracts/variables';
+
+.icon-angle-right{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: transform .5s;
+    cursor: pointer;
+    background-color: variables.color(submit-btn);
+    border-radius: 50%;
+
+    &:hover{
+        transform: translateX(.3rem);
+    }
+
+    .line{
+        width: .7rem;
+        height: .2rem;
+        background-color: white;
+        transform-origin: right;
+    }
+
+    .line-1{
+        transform: translateY(.6rem) rotate(50deg);
+    }
+
+    .line-2{
+        transform: translateY(-.6rem) rotate(-50deg);
+    }
+}

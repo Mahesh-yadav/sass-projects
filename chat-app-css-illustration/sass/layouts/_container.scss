@@ -1,0 +1,79 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.color(app-bg);
+    position: relative;
+
+    @include mixins.responsive(lg){
+        flex-direction: row;
+        padding: 10rem 0;
+    }
+
+    &::before{
+        content: '';
+        width: 50%;
+        height: 57%;
+        background-color: variables.color(chat-left);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 35rem 75rem;
+
+        @include mixins.responsive(sm){
+            border-bottom-right-radius: 45rem;
+        }
+
+        @include mixins.responsive(lg){
+            width: 35%;
+            height: 80%;
+            border-bottom-left-radius: 25rem;
+            border-bottom-right-radius: 25rem;
+            left: -10rem;
+        }
+
+        @include mixins.responsive(xl){
+            width: 33%;
+            height: 90%;
+            border-bottom-left-radius: 30rem;
+            border-bottom-right-radius: 30rem;
+        }
+    }
+
+    &::after{
+        content: '';
+        width: 50%;
+        height: 50%;
+        background-color: hsla(275, 36%, 91%, 0.493);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-top-left-radius: 25rem 45rem;
+
+        @include mixins.responsive(sm){
+            border-top-left-radius: 45rem;
+        }
+
+        @include mixins.responsive(lg){
+            width: 45%;
+            height: 80%;
+            border-top-left-radius: 25rem;
+            border-top-right-radius: 25rem;
+            right: -10rem;
+        }
+
+        @include mixins.responsive(xl){
+            width: 27%;
+            height: 90%;
+            border-top-left-radius: 45rem 40rem;
+            border-top-right-radius: 20rem 4rem;
+            right: 0;
+        }
+        
+    }
+}

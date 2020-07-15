@@ -1,0 +1,168 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.chat-box{
+    width: 27rem;
+    margin: 6rem auto;
+    background-color: #ffffff;
+    border-radius: 3rem;
+    padding: 1rem;
+    box-shadow: 10px 25px 40px #ccc;
+    position: relative;
+    z-index: 10;
+
+    @include mixins.responsive(lg){
+        margin: 0;
+        margin-right: 5rem;
+    }
+
+    .chat-header{
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, variables.color(gradient-violet), variables.color(gradient-magenta));
+        position: relative;
+        padding: 3.5rem .5rem 1.5rem 1rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+
+        .avatar-image{
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: cover;
+            border: .2rem solid white;
+            border-radius: 50%;
+            margin-right: .5rem;
+        }
+
+        .avatar-name{
+            color: white;
+            margin-bottom: .4rem;
+            opacity: .8;
+        }
+
+        .avatar-status{
+            color: variables.color(sub-heading);
+            font-size: .8rem;
+        }
+
+        .top-bar{
+            width: 50%;
+            height: 3rem;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            background-color: white;
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .chat-body{
+        display: flex;
+        flex-direction: column;
+        background-color: variables.color(app-bg);
+        padding: 1rem .7rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+
+        .msg-other{
+            @include mixins.chatMsg(variables.color(chat-left), darken(variables.color(app-bg), 5%));
+
+            border-bottom-left-radius: .5rem;
+        }
+
+        .msg-self{
+            @include mixins.chatMsg(variables.color(chat-right), white);
+            border-bottom-right-radius: .5rem;
+            box-shadow: 1px 3px 15px 0 #ccc;
+        }
+
+        .radio-btn{
+            width: 70%;
+            background: linear-gradient(to right, variables.color(gradient-magenta), variables.color(gradient-violet));
+            border-radius: 1rem;
+            border-bottom-left-radius: .4rem;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: .8rem;
+            color: white;
+        }
+
+        .circle{
+            width: 1.2rem;
+            height: 1.2rem;
+            background: transparent;
+            border: .1rem solid variables.color(radio-btn);
+            border-radius: 50%;
+            margin: 0 1rem;
+        }
+
+        .duration{
+            font-size: .7rem;
+            opacity: .7;
+        }
+
+        .price{
+            font-weight: 700;
+            margin-left: auto;
+            margin-right: 1.5rem;
+            font-size: 1.4rem;
+            opacity: .9;
+        }
+
+        .images-wrapper{
+            margin-bottom: .8rem;
+        }
+
+        .dog-img{
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 1rem;
+            object-fit: cover;
+            margin-left: .6rem;
+        }
+
+        .msg-form{
+            position: relative;
+        }
+        
+        .msg-input{
+            width: 100%;
+            height: 3.5rem;
+            border-radius: 5rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            color: variables.color(placeholder-text);
+            background-color: white;
+            border: none;
+            outline: none;
+        }
+
+        .msg-input:focus{
+            background-color: lighten(variables.color(radio-btn), 0%);
+            color: white;
+        }
+
+        .btn-send{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: .4rem;
+        }
+
+        .align-left{
+            @include mixins.chatGroup(flex-start, flex-start);
+        }
+
+        .align-right{
+            @include mixins.chatGroup(flex-end, flex-end);
+        }
+    }
+}
