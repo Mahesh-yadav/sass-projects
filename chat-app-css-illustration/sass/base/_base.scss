@@ -11,3 +11,16 @@ html{
     box-sizing: inherit;
     font-family: 'Rubik', sans-serif;
 }
+
+@keyframes fromBottom{
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}

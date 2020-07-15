@@ -11,6 +11,18 @@ html {
   font-family: "Rubik", sans-serif;
 }
 
+@keyframes fromBottom {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .container {
   width: 100%;
   display: flex;
@@ -260,14 +272,16 @@ html {
   border-radius: 5rem;
   padding: 1rem 2rem;
   font-size: 1rem;
-  color: #c6cacd;
+  color: #6e5d7e;
   background-color: white;
-  border: none;
+  border: 1px solid white;
   outline: none;
 }
+.chat-box .chat-body .msg-input::placeholder {
+  color: #c6cacd;
+}
 .chat-box .chat-body .msg-input:focus {
-  background-color: #e570ff;
-  color: white;
+  border: 1px solid #e570ff;
 }
 .chat-box .chat-body .btn-send {
   background-color: transparent;
@@ -293,6 +307,48 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.chat-box .chat-body #msg-1 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-2 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-3 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 3.5s;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-4 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-5 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 6.5s;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-6 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 8.5s;
+  animation-fill-mode: backwards;
+}
+.chat-box .chat-body #msg-7 {
+  animation: fromBottom;
+  animation-duration: 1s;
+  animation-delay: 10s;
+  animation-fill-mode: backwards;
 }
 
 .icon-angle-left {

@@ -136,15 +136,18 @@
             border-radius: 5rem;
             padding: 1rem 2rem;
             font-size: 1rem;
-            color: variables.color(placeholder-text);
+            color: variables.color(chat-right);
             background-color: white;
-            border: none;
+            border: 1px solid white;
             outline: none;
         }
 
+        .msg-input::placeholder{
+            color: variables.color(placeholder-text);
+        }
+
         .msg-input:focus{
-            background-color: lighten(variables.color(radio-btn), 0%);
-            color: white;
+            border: 1px solid lighten(variables.color(radio-btn), 0%);
         }
 
         .btn-send{
@@ -163,6 +166,17 @@
 
         .align-right{
             @include mixins.chatGroup(flex-end, flex-end);
+        }
+
+        $anim-delays: 0, 1.5s, 3.5s, 5s, 6.5s, 8.5s, 10s;
+
+        @for $i from 1 through 7 {
+            #msg-#{$i}{
+                animation: fromBottom;
+                animation-duration: 1s;
+                animation-delay: nth($anim-delays, $i);
+                animation-fill-mode: backwards;
+            }
         }
     }
 }
